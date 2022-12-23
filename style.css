@@ -14,6 +14,8 @@
   background-position: center;
   padding: 0 8%;
   position: relative;
+  background-position: 0 0;
+  animation: back 20s linear infinite;
 }
 
 nav {
@@ -25,7 +27,7 @@ nav {
 }
 
 .logo {
-  width: 120px;
+  height: 80px;
   cursor: pointer;
 }
 
@@ -37,7 +39,7 @@ nav {
 nav ul {
   flex: 1;
   text-align: right;
-  padding-right: 30px;
+  /* padding-right: 30px; */
 }
 
 nav ul li {
@@ -51,9 +53,13 @@ nav ul li a {
   text-decoration: none;
 }
 
-nav ul li a::after {
+nav ul li a:hover {
+  color: rgb(235, 252, 0);
+}
+
+nav ul li a:after {
   content: "";
-  width: 0;
+  width: 0%;
   height: 3px;
   position: absolute;
   bottom: -5px;
@@ -63,9 +69,9 @@ nav ul li a::after {
   transition: width 0.3s;
 }
 
-/* nav ul li a:hover::after {
+nav ul li a:after:hover {
   width: 50%;
-} */
+}
 
 .text-box {
   color: white;
@@ -79,7 +85,7 @@ nav ul li a::after {
 }
 
 .text-box h1 {
-  font-size: 160px;
+  font-size: 140px;
   line-height: 160px;
   margin-left: -10px;
   color: transparent;
@@ -101,16 +107,55 @@ nav ul li a::after {
   font-weight: 600;
 }
 
-.text-box row {
+.text-box .row {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
   margin-top: 30px;
 }
 
-.text-box a {
+.text-box .row a {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: capitalize;
   color: white;
   padding: 10px 20px;
   margin-right: 20px;
   border: 2px solid #fff;
+  text-decoration: none;
+}
+
+.text-box .row a:hover {
+  color: black;
+  background-color: rgb(235, 252, 0);
+  border: none;
+  padding: 12px 22px;
+}
+
+@media screen and (max-width: 1200px) {
+  .text-box h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+  .text-box h3 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .text-box h1 {
+    font-size: 42px;
+    line-height: 40px;
+  }
+
+  .text-box h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  .text-box {
+    bottom: 30%;
+  }
 }
