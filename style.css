@@ -104,7 +104,6 @@ nav ul li a:after:hover {
   background: url(images/back2.svg);
   -webkit-background-clip: text;
   background-position: 0 0;
-  animation: back 20s linear infinite;
 }
 
 @keyframes back {
