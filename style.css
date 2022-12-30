@@ -10,13 +10,13 @@
   height: 100vh;
   background-color: #101010;
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), transparent),
-    url(images/background.png);
+    url(images/background.svg);
   background-size: cover;
   background-position: center;
   padding: 0 8%;
   position: relative;
   background-position: 0 0;
-  animation: back 20s linear infinite;
+  
 }
 
 /* #myVideo {
@@ -104,6 +104,7 @@ nav ul li a:after:hover {
   background: url(images/back2.svg);
   -webkit-background-clip: text;
   background-position: 0 0;
+  animation: back 20s linear infinite;
 }
 
 @keyframes back {
